@@ -1,0 +1,80 @@
+<app-header-user></app-header-user>
+
+<!-- Page Content -->
+<div class="container">
+  <header class="jumbotron my-4" style="background: linear-gradient(45deg, #3f87a6, #ebf8e1); color: white; text-align: center; padding: 50px 0;">
+    <h1 class="display-3" style="font-family: 'Orbitron', sans-serif;">Bienvenido a Spring Ecommerce 2025</h1>
+    <p class="lead" style="font-family: 'Roboto', sans-serif;">Tu tienda de productos en Línea</p>
+  </header>
+
+  <!-- Mostrar Productos -->
+  <div class="main-content mb-5">
+    <div class="section-content section-content-p30">
+      <div class="container-fluid">
+        <div class="row row-cols-1 row-cols-md-4 g-4"> <!-- g-4 agrega el espacio entre columnas y filas -->
+          <div *ngFor="let p of products" class="col">
+            <div class="product-box" style="background-color: #2a2a2a; border-radius: 15px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); transition: all 0.3s ease-in-out; padding: 20px; display: flex; flex-direction: column; height: 500px;"> <!-- Altura fija -->
+              
+              <!-- Imagen del producto con un estilo más atractivo -->
+              <img src="{{p.urlImage}}" class="img-fluid product-image" style="border-radius: 10px; max-width: 100%; height: auto; object-fit: contain; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease-in-out;">
+              
+              <!-- Nombre del producto con mejor contraste -->
+              <h2 class="card-text" style="color: #fff; font-family: 'Roboto', sans-serif; font-size: 1.1rem; margin-top: 15px; text-align: center; text-transform: uppercase; letter-spacing: 1px; flex-grow: 1;">
+                {{p.name}}
+              </h2>
+
+              <!-- Precio del producto con color brillante -->
+              <div class="price" style="color: #00f9ff; font-weight: bold; text-align: center; font-size: 1.2rem; margin: 10px 0;">
+                {{p.price}}
+              </div>
+              
+              <!-- Botón de acción con estilo -->
+              <div class="product-show" style="text-align: center;">
+                <a [routerLink]="['/cart/detailproduct', p.id]" class="primary-btn text-decoration-none" style="background-color: #00f9ff; color: #1e1e1e; border-radius: 25px; padding: 10px 20px; text-transform: uppercase; transition: background-color 0.3s ease, transform 0.3s ease;">
+                  Ver producto
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="py-5 bg-dark">
+  <div class="container">
+    <p class="m-0 text-center text-white" style="font-family: 'Roboto', sans-serif;">Copyright &copy; Spring eCommerce 2025</p>
+  </div>
+</footer>
+
+<!-- Agregar enlace a la fuente de Google Fonts para un toque futurista -->
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+<!-- Estilo CSS adicional para el efecto de crecimiento en la imagen y hover en el botón -->
+<style>
+  .product-image:hover {
+    transform: scale(1.4); /* Aumenta el tamaño al pasar el mouse */
+    cursor: pointer; /* Cambia el cursor para indicar que es interactivo */
+  }
+
+  .primary-btn {
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transición suave para fondo y escala */
+  }
+
+  .primary-btn:hover {
+    background-color: #0078b3; /* Cambia el color de fondo al pasar el mouse */
+    transform: scale(1.1); /* Efecto de crecimiento del botón */
+  }
+
+  .product-box {
+    display: flex;
+    flex-direction: column;
+    height: 400px; /* Establecemos una altura fija para las cards */
+  }
+
+  .product-box .card-text {
+    flex-grow: 1; /* Permite que el nombre del producto se ajuste sin afectar otros elementos */
+  }
+</style>

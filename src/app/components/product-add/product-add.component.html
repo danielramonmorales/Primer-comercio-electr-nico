@@ -1,0 +1,68 @@
+<app-header-admin></app-header-admin>
+<div class="container">
+    <!-- Page Heading/Breadcrumbs -->
+    <h1 class="mt-4 mb-3 ">
+        eCommerce <small>Productos</small> S.D.C
+    </h1>
+
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a routerLink="">Home</a></li>
+        <li class="breadcrumb-item active"> Crear Productos</li>
+    </ol>
+
+    <h2>Crear Producto</h2>
+    <form class="form-horizontal" (ngSubmit)="addProduct()" enctype="multipart/form-data">
+      
+        <input type="hidden" [(ngModel)]="id" name="id">
+        
+        <!-- Select Category -->
+        <div class="form-group">
+            <label for="categoria">Elija una categoría:</label>
+            <div>
+                <select [(ngModel)]="categoryId" name="category" class="form-control">
+                    <option *ngFor="let cat of categories" [value]="cat.id">{{cat.name}}</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Product Name -->
+        <div class="form-group">
+            <label for="nombre">Nombre:</label>
+            <div>
+                <input [(ngModel)]="name" type="text" class="form-control" id="nombre" name="nombre"
+                placeholder="Ingrese el nombre del producto" autocomplete="off" required>
+            </div>
+        </div>
+
+        <!-- Product Description -->
+        <div class="form-group">
+            <label for="descripcion">Descripción:</label>
+            <div>
+                <textarea [(ngModel)]="description" class="form-control" id="descripcion" name="descripcion"
+                placeholder="Ingrese la descripción del producto" required autocomplete="off"></textarea>
+            </div>
+        </div>
+
+        <!-- Product Price -->
+        <div class="form-group">
+            <label for="precio">Precio:</label>
+            <div>
+                <input [(ngModel)]="price" type="number" class="form-control" step="any" id="precio" name="precio"
+                placeholder="Ingrese el precio del producto" autocomplete="off" required>
+            </div>
+        </div>
+
+        <!-- Product Image -->
+        <div class="form-group">
+            <label for="img">Imagen:</label>
+            <div>
+                <input type="file" class="form-control-file" id="img" name="img" (change)="OnFileSelected($event)">
+            </div>
+        </div>
+
+        <!-- Submit Button -->
+        <div>
+            <button type="submit" class="btn btn-primary">Guardar</button>
+        </div>
+    </form>
+</div>

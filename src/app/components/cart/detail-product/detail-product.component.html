@@ -1,0 +1,58 @@
+<app-header-user></app-header-user>
+
+<div class="container">
+  <!-- Page Heading/Breadcrumbs -->
+  <h1 class="mt-4 mb-3" style="color: #fff; font-family: 'Orbitron', sans-serif; text-align: center;">
+    Spring eCommerce <small style="font-family: 'Roboto', sans-serif;">Producto</small>
+  </h1>
+
+  <ol class="breadcrumb" style="background-color: transparent; color: #fff;">
+    <li class="breadcrumb-item"><a href="index.html" style="color: #00f9ff;">Home</a></li>
+    <li class="breadcrumb-item active" style="color: #fff;">Producto</li>
+  </ol>
+
+  <!-- Blog Post -->
+  <div class="card mb-4" style="background-color: #2a2a2a; border-radius: 15px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);">
+    <div class="card-body">
+      <div class="row">
+        <div class="col-lg-6">
+          <a href="#">
+            <img class="img-fluid rounded" src="{{urlImage}}" alt="" style="max-height: 350px; object-fit: cover; border-radius: 10px;">
+          </a>
+        </div>
+        <div class="col-lg-6">
+          <form action="#" method="POST">
+            <h2 class="card-title" style="color: #fff; font-family: 'Roboto', sans-serif; font-size: 1.5rem;">
+              {{name}}
+            </h2>
+
+            <ul class="list-group">
+              <li class="list-group-item" style="background-color: #333; color: #fff; border: none;">
+                <h5 style="font-weight: bold;">Precio: <span style="color: #00f9ff;">{{price}}</span></h5>
+              </li>
+              <li class="list-group-item" style="background-color: #333; color: #fff; border: none;">
+                <p>Descripción: {{description}}</p>
+              </li>
+              <li class="list-group-item" style="background-color: #333; color: #fff; border: none;">
+                <h6 style="font-weight: bold;">
+                  Cantidad:
+                  <input type="number" [(ngModel)]="quantity" id="quantity" name="quantity" autocomplete="off"
+                    min="1" max="5" value="1" style="border-radius: 5px; padding: 5px; width: 60px;">
+                </h6>
+              </li>
+            </ul>
+
+            <!-- Botón de añadir al carrito con estilo futurista -->
+            <button (click)="addCart(id)" class="btn" style="background-color: #00f9ff; color: #1e1e1e; border-radius: 25px; padding: 12px 25px; text-transform: uppercase; font-weight: bold; transition: background-color 0.3s ease;">
+              Añadir al carrito
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div> <!-- /.container -->
+
+<!-- Agregar enlace a la fuente de Google Fonts para un toque futurista -->
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
