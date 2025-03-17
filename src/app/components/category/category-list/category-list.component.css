@@ -1,0 +1,105 @@
+/* Color turquesa personalizado */
+.text-turquoise {
+    color: #1abc9c; /* Turquesa brillante */
+}
+
+/* Botones con color turquesa */
+.btn-turquoise {
+    background-color: #1abc9c;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: background-color 0.3s ease-in-out;
+}
+
+/* Hover en el botón turquesa */
+.btn-turquoise:hover {
+    background-color: #16a085;
+}
+
+/* Encabezados de la página */
+h1, h2 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+}
+
+/* Estilo de la tabla */
+.table {
+    background-color: #2d3436; /* Fondo oscuro */
+    border-radius: 15px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.5); /* Sombra para dar profundidad */
+}
+
+/* Estilo de las filas de la tabla */
+.table td, .table th {
+    padding: 15px;
+    vertical-align: middle;
+}
+
+/* Encabezado de la tabla */
+.thead-dark th {
+    background-color: #1abc9c; /* Color turquesa para el encabezado */
+    color: white;
+    font-weight: bold;
+}
+
+/* Efectos de hover sobre las filas de la tabla */
+.table tbody tr:hover {
+    background-color: #16a085; /* Color turquesa suave al pasar el ratón */
+    cursor: pointer;
+}
+
+/* Estilo de los botones de editar y eliminar */
+.btn-warning {
+    background-color: #f39c12;
+    border-color: #f39c12;
+    color: white;
+    border-radius: 8px;
+    padding: 8px 15px;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover en el botón de editar */
+.btn-warning:hover {
+    background-color: #e67e22;
+}
+
+/* Estilo de los botones de eliminar */
+.btn-danger {
+    background-color: #e74c3c;
+    border-color: #e74c3c;
+    color: white;
+    border-radius: 8px;
+    padding: 8px 15px;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover en el botón de eliminar */
+.btn-danger:hover {
+    background-color: #c0392b;
+}
+
+/* Efectos de las migas de pan (breadcrumb) */
+.breadcrumb-item a {
+    color: #1abc9c; /* Turquesa en los enlaces */
+    transition: color 0.3s ease;
+}
+
+/* Hover en los enlaces de breadcrumb */
+.breadcrumb-item a:hover {
+    color: #16a085; /* Tono más oscuro de turquesa */
+    text-decoration: underline;
+}
+
+/* Efecto de sombra en las tablas */
+.table-bordered {
+    border: 1px solid #1abc9c; /* Borde turquesa para la tabla */
+}
+
+/* Configuración del contenedor para que se vea limpio */
+.container {
+    padding-top: 80px; /* Espacio para que no se superponga con el header fijo */
+}

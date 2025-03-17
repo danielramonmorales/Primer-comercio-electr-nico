@@ -1,0 +1,10 @@
+<div>
+    <input type="text" [(ngModel)]="query" (input)="onSearch()" placeholder="Buscar productos..." />
+    <ul *ngIf="results.length > 0">
+      <li *ngFor="let product of results">
+        {{ product.name }} - {{ product.price | currency }}
+      </li>
+    </ul>
+    <p *ngIf="query && results.length === 0">No se encontraron productos.</p>
+  </div>
+  

@@ -1,40 +1,35 @@
-  
-  <app-header-user></app-header-user>
-  <!-- Page Content -->
-  <div class="container">
+<app-header-user></app-header-user>
+<!-- Page Content -->
+<div class="container">
 
-    <div class="card mb-3">
-      <div class="row no-gutters">
-        <div class="col-md-4">
-        </div>
-        <div class="col-md-8">
-          <div class="card-body">
-            <h2>Ingresar</h2>
-
-          </div>
+  <div class="card mb-3">
+    <div class="row no-gutters  ">
+      <div class="col-md-4">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body ">
+          <h2 class="text-white">Santiago de Compostela</h2>
         </div>
       </div>
     </div>
-
-    
-    <form (ngSubmit)="login()">
-      <div class="form-group">
-        <label for="email"> Email:  </label>      
-        <input [(ngModel)]="username" type="email" class="form-control" id="email" name="email" placeholder="Ingrese su email" required autocomplete="off"> 
-
-      </div>
-
-      <div class="form-group">
-        <label for="pwd"> Contraseña:</label>
-        <input [(ngModel)]="password" type="password"  class="form-control" id="password" name="password" placeholder="Ingrese su contraseña" required>       
-      </div>
-
-      <div class="form-group">
-        <div class="col-sm-2">
-          <button type="submit" class="btn btn-dark"> <span class="glyphicon glyphicon-ok"></span> Ingresar</button>
-        </div>      
-      </div>    
-    </form>
-    <a href="registro.html" class="card-link">Si aún no tiene cuenta aqui puede registrarse</a>
   </div>
-  <!-- /.container -->
+
+  <form (ngSubmit)="login()">
+    <div class="form-group">
+      <label for="email"> Email: </label>      
+      <input [(ngModel)]="username" type="email" class="form-control futurista" id="email" name="email" placeholder="Ingrese su email" required autocomplete="off"> 
+    </div>
+
+    <div class="form-group">
+      <label for="pwd"> Contraseña:</label>
+      <input [(ngModel)]="password" type="password"  class="form-control futurista" id="password" name="password" placeholder="Ingrese su contraseña" required>       
+    </div>
+
+    <div class="form-group text-center">
+      <button type="submit" class="btn btn-futurista  m-4"> <span class="glyphicon glyphicon-ok"></span> Ingresar</button>
+    </div>    
+
+  </form>
+  <a [routerLink]="['/user/register']"  class="card-link text-center">Si aún no tiene cuenta, aquí puede registrarse</a>
+</div>
+<!-- /.container -->

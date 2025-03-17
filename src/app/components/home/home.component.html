@@ -1,11 +1,37 @@
 <app-header-user></app-header-user>
+<app-product-search></app-product-search>
 
 <!-- Page Content -->
 <div class="container">
+  
+  <!-- Banner de Bienvenida -->
   <header class="jumbotron my-4" style="background: linear-gradient(45deg, #3f87a6, #ebf8e1); color: white; text-align: center; padding: 50px 0;">
     <h1 class="display-3" style="font-family: 'Orbitron', sans-serif;">Bienvenido a Spring Ecommerce 2025</h1>
     <p class="lead" style="font-family: 'Roboto', sans-serif;">Tu tienda de productos en Línea</p>
   </header>
+
+  <!-- Carrusel de imágenes -->
+  <div id="carouselExample" class="carousel slide mb-4" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="https://media.istockphoto.com/id/1449490038/es/foto/concepto-de-tecnolog%C3%ADa-de-compras-en-l%C3%ADnea-y-comercio-electr%C3%B3nico-comprador-que-usa.jpg?s=2048x2048&w=is&k=20&c=Y81BUbWC9ZZLApE2_kOZtOEC93e6uChT2iIRRXqXe_c=" class="d-block w-100" alt="Imagen 1">
+      </div>
+      <div class="carousel-item">
+        <img src="https://media.istockphoto.com/id/1428709516/es/foto/compras-en-l%C3%ADnea-mujer-mano-compras-en-l%C3%ADnea-en-computadora-port%C3%A1til-con-diagrama-de-icono.jpg?s=2048x2048&w=is&k=20&c=zDvKOjHbI2iSKKCTQi229jC9tWoRZ4mrAn7CGl8SnGw=" class="d-block w-100" alt="Imagen 2">
+      </div>
+      <div class="carousel-item">
+        <img src="https://media.istockphoto.com/id/1165069915/es/foto/bolsas-de-compras-en-carrito-de-compras-y-tarjeta-de-cr%C3%A9dito-en-el-ordenador-port%C3%A1til-con.jpg?s=2048x2048&w=is&k=20&c=5MRAfyTjMj8giQwPnwuGmzNDOph51RD_Xvqf9hqCch0=" class="d-block w-100" alt="Imagen 3">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
 
   <!-- Mostrar Productos -->
   <div class="main-content mb-5">
@@ -25,7 +51,7 @@
 
               <!-- Precio del producto con color brillante -->
               <div class="price" style="color: #00f9ff; font-weight: bold; text-align: center; font-size: 1.2rem; margin: 10px 0;">
-                {{p.price}}
+                ${{p.price}}
               </div>
               
               <!-- Botón de acción con estilo -->
@@ -54,6 +80,17 @@
 
 <!-- Estilo CSS adicional para el efecto de crecimiento en la imagen y hover en el botón -->
 <style>
+
+#carouselExample {
+    max-height: 550px; /* Limita la altura máxima del carrusel */
+    overflow: hidden; /* Evita que el contenido se desborde */
+  }
+
+  #carouselExample .carousel-inner img {
+    height: 100%; /* Hace que las imágenes se ajusten al 100% de la altura del carrusel */
+    object-fit: cover; /* Ajusta la imagen para cubrir el área sin distorsionar */
+  }
+
   .product-image:hover {
     transform: scale(1.4); /* Aumenta el tamaño al pasar el mouse */
     cursor: pointer; /* Cambia el cursor para indicar que es interactivo */

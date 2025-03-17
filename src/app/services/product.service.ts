@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpErrorResponse } from '@angular/common/http';
-import { Observable, throwError } from 'rxjs';
-import { catchError } from 'rxjs/operators';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 import { Product } from 'src/app/common/product';
 import { HeaderService } from './header.service';
 
@@ -36,6 +35,10 @@ export class ProductService {
     
   }
 
+  searchProducts(query: string): Observable<Product[]> {
+    const searchUrl = `${this.apiUrl}/search?query=${query}`;
+    return this.httpClient.get<Product[]>(searchUrl, { headers: this.headerService.headers });
+  }
 
 }
 

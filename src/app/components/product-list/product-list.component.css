@@ -1,0 +1,49 @@
+/* Color turquesa personalizado */
+.text-turquoise {
+    color: #1abc9c; /* Turquesa brillante */
+}
+
+/* Fondo turquesa para los botones */
+.btn-turquoise {
+    background-color: #1abc9c; /* Turquesa */
+    border-color: #1abc9c;
+    color: white;
+}
+
+.btn-turquoise:hover {
+    background-color: #16a085; /* Un tono más oscuro para el hover */
+    border-color: #16a085;
+    box-shadow: 0px 4px 15px rgba(26, 188, 156, 0.5); /* Sombra para darle un toque futurista */
+}
+
+/* Efecto de hover en las filas de la tabla */
+.table-hover tbody tr:hover {
+    background-color: rgba(26, 188, 156, 0.1); /* Fondo suave en color turquesa */
+    transform: scale(1.02); /* Ligero zoom para darle interactividad */
+    transition: all 0.3s ease-in-out; /* Transición suave */
+}
+
+/* Botones con bordes redondeados */
+.btn-sm {
+    border-radius: 25px;
+}
+
+.table-dark th, .table-dark td {
+    padding: 15px;
+}
+
+.table-dark {
+    background-color: #2d3436; /* Fondo oscuro para la tabla */
+}
+
+/* Encabezados con color turquesa */
+.table-dark th {
+    background-color: #16a085; /* Un tono de turquesa más oscuro */
+    color: white;
+}
+
+/* Efecto de sombra en la tabla */
+.table-responsive {
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+}

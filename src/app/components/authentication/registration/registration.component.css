@@ -1,0 +1,108 @@
+/* General Styling */
+body {
+    background-color: #f8f9fa; /* Fondo suave y claro */
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Contenedor Principal */
+.container {
+    background-color: #fff; /* Fondo blanco para el formulario */
+    border-radius: 8px;
+    padding: 40px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 60%; /* Ancho del formulario */
+    margin: 40px auto; /* Centrado y con separación superior */
+    text-align: left;
+}
+
+/* Título del formulario */
+h2 {
+    color: #1abc9c; /* Verde turquesa */
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Formulario */
+form {
+    margin-top: 20px;
+}
+
+/* Etiquetas */
+label {
+    font-size: 1rem;
+    color: #555; /* Gris oscuro para las etiquetas */
+    margin-bottom: 5px;
+}
+
+/* Estilo de los campos de entrada */
+input.form-control {
+    background-color: #ecf0f1; /* Fondo gris claro */
+    border: 1px solid #bdc3c7;
+    border-radius: 4px;
+    padding: 12px;
+    font-size: 1rem;
+    margin-bottom: 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+input.form-control:focus {
+    border-color: #1abc9c; /* Verde turquesa al enfocar */
+    box-shadow: 0 0 5px rgba(26, 188, 156, 0.6);
+    background-color: #fff;
+}
+
+/* Botón de envío */
+.btn-success {
+    background-color: #1abc9c; /* Verde turquesa */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+.btn-success:hover {
+    background-color: #16a085; /* Oscuro para hover */
+    transform: scale(1.05);
+}
+
+.btn-success:focus {
+    box-shadow: 0 0 5px rgba(26, 188, 156, 0.6);
+}
+
+/* Estilos de la tarjeta (Card) */
+.card {
+    border: none; /* Sin bordes */
+    border-radius: 8px;
+    background-color: #fff; /* Fondo blanco */
+}
+
+.card-body {
+    padding: 30px;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .container {
+        width: 90%; /* El formulario ocupa más espacio en pantallas pequeñas */
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    .btn-success {
+        font-size: 1rem;
+    }
+}

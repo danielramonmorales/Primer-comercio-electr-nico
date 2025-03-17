@@ -1,0 +1,59 @@
+/* General Styling */
+body {
+    background-color: #f8f9fa; /* Fondo claro para contraste */
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Contenedor principal para el mensaje */
+div {
+    background-color: #fff; /* Fondo blanco */
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 50%;
+    margin: 50px auto;
+    text-align: center;
+}
+
+/* Título */
+h2 {
+    color: #1abc9c; /* Verde turquesa */
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+/* Mensaje de éxito */
+p {
+    font-size: 1.2rem;
+    color: #16a085; /* Verde más oscuro */
+    margin-top: 20px;
+    font-weight: 500;
+}
+
+/* Icono de éxito */
+.success-icon {
+    font-size: 3rem;
+    color: #1abc9c;
+    margin-bottom: 20px;
+}
+
+/* Estilo de la página (general) */
+@media (max-width: 768px) {
+    div {
+        width: 80%; /* En pantallas pequeñas, el mensaje ocupa más espacio */
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+}

@@ -21,6 +21,7 @@ import { RegistrationComponent } from './components/authentication/registration/
 import { LoginComponent } from './components/authentication/login/login.component';
 import { LogoutComponent } from './components/logout/logout.component';
 import { authGuard } from './guards/auth.guard';
+import { ProductSearchComponent } from './components/product-search/product-search.component';
  
 //RUTAS  
 const routes : Routes = [
@@ -33,7 +34,7 @@ const routes : Routes = [
   {path:'admin/category/add', component:CategoryAddComponent},
   {path:'admin/category/update/:id', component:CategoryAddComponent},
   {path:'cart/detailproduct/:id', component:DetailProductComponent},
-  {path:'cart/sumary', component: SumaryOrderComponent, canActivate: [authGuard]},
+  {path:'cart/sumary', component: SumaryOrderComponent},//,canActivate: [authGuard]
   {path:'payment/success', component: PaymentSuccessComponent},
   {path:'user/register', component: RegistrationComponent},
   {path:'user/login', component: LoginComponent},
@@ -59,7 +60,8 @@ const routes : Routes = [
     PaymentSuccessComponent,
     RegistrationComponent,
     LoginComponent,
-    LogoutComponent
+    LogoutComponent,
+    ProductSearchComponent
   ],
   imports: [
     BrowserModule,

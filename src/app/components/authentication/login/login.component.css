@@ -1,0 +1,79 @@
+/* Estilo general */
+body {
+    font-family: 'Roboto', sans-serif;
+    background: #00ffcc;
+    color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  /* Estilo para la tarjeta */
+  .card {
+    background: #00ffcc;
+    border-radius: 12px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+    border: none;
+    margin-top: 20px;
+    transition: transform 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Efecto para los inputs y botones */
+  .futurista {
+    background: #333;
+    border: 1px solid #444;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 16px;
+    padding: 12px;
+    transition: all 0.3s ease;
+  }
+  
+  .futurista:focus {
+    border-color: #00ffcc;
+    outline: none;
+    box-shadow: 0 0 8px rgba(0, 255, 204, 0.6);
+  }
+  
+  .futurista::placeholder {
+    color: #aaa;
+  }
+  
+  /* Estilo para el botón */
+  .btn-futurista {
+    background: linear-gradient(90deg, #00ffcc, #00b3b3);
+    border: none;
+    border-radius: 30px;
+    color: white;
+    padding: 12px 30px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .btn-futurista:hover {
+    background: linear-gradient(90deg, #00b3b3, #00ffcc);
+    transform: scale(1.05);
+  }
+  
+  /* Enlace de registro */
+  .card-link {
+    color: #00ffcc;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+    transition: color 0.3s ease;
+  }
+  
+  .card-link:hover {
+    color: #00b3b3;
+  }
+  

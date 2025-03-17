@@ -9,7 +9,7 @@ import { HomeService } from 'src/app/services/home.service';
   styleUrls: []
 })
 export class HomeComponent implements OnInit{
-
+  
   isDarkMode = false; // Inicialmente en modo claro
   products: Product [] = [];
 

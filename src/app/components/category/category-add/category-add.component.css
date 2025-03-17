@@ -1,0 +1,107 @@
+/* General Styling */
+body {
+    background-color: #ecf0f1; /* Fondo claro para contraste */
+    font-family: 'Arial', sans-serif;
+    color: #333; /* Color de texto oscuro */
+    margin: 0;
+    padding: 0;
+}
+
+/* Contenedor Principal */
+.container {
+    background-color: #fff; /* Fondo blanco para el formulario */
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    width: 60%; /* El formulario ocupa el 60% del ancho */
+    margin: 40px auto; /* Centrado en la página con separación superior */
+    text-align: left;
+}
+
+/* Header Styling */
+h1, h2 {
+    color: #1abc9c; /* Verde turquesa */
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+small {
+    font-size: 1.2rem;
+    color: #95a5a6;
+}
+
+/* Breadcrumb Styling */
+.breadcrumb {
+    background-color: transparent;
+    padding: 0;
+    margin-bottom: 20px;
+    font-size: 1rem;
+}
+
+.breadcrumb-item {
+    color: #1abc9c;
+}
+
+.breadcrumb-item.active {
+    color: #7f8c8d;
+}
+
+/* Input Field Styling */
+input.form-control {
+    background-color: #ecf0f1; /* Fondo gris claro */
+    color: #333;
+    border: 1px solid #bdc3c7;
+    border-radius: 4px;
+    padding: 10px;
+    font-size: 1rem;
+    margin-bottom: 20px; /* Separación entre los campos */
+    transition: all 0.3s ease-in-out;
+}
+
+input.form-control:focus {
+    border-color: #1abc9c; /* Verde turquesa al enfocar */
+    background-color: #fff;
+    box-shadow: 0 0 5px rgba(26, 188, 156, 0.6);
+}
+
+/* Button Styling */
+.btn-success {
+    background-color: #1abc9c; /* Verde turquesa */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 12px 25px;
+    font-size: 1.1rem;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    margin-top: 20px;
+    text-align: center;
+    display: inline-block;
+}
+
+.btn-success:hover {
+    background-color: #16a085; /* Oscuro para hover */
+    transform: scale(1.05);
+}
+
+.btn-success i {
+    margin-right: 10px;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        padding: 20px;
+    }
+
+    h1, h2 {
+        font-size: 2rem;
+    }
+
+    .btn-success {
+        font-size: 1rem;
+    }
+}

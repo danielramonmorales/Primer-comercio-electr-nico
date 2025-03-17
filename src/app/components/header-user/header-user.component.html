@@ -1,7 +1,9 @@
 <!-- Navigation -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-lg">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-lg "  style="background: linear-gradient(145deg, #1a8b8b, #00d9d9)">
   <div class="container-fluid">
-    <a class="navbar-brand" [routerLink]="['/']" style="font-family: 'Orbitron', sans-serif; font-size: 1.8rem; letter-spacing: 2px;">Spring eCommerce</a>
+    <a class="navbar-brand" [routerLink]="['/']" style="font-family: 'Orbitron', sans-serif; font-size: 1.8rem; letter-spacing: 2px; color: #ffffff;">
+      Spring eCommerce
+    </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -11,17 +13,26 @@
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
           <form class="d-flex">
-            <input class="form-control me-2" type="search" placeholder="Buscar productos..." aria-label="Search" style="border-radius: 25px; border: 1px solid #00f9ff;">
-            <button class="btn btn-outline-light" type="submit" style="border-radius: 25px; color: #00f9ff; border-color: #00f9ff; transition: all 0.3s ease-in-out;">Buscar</button>
+            <input class="form-control me-2" type="search" placeholder="Buscar productos..." aria-label="Search" style="border-radius: 25px; border: 1px solid #00d9d9;">
+            <button class=" btn-outline-turquoise" type="submit" style="border-radius: 25px;">Buscar</button>
           </form>
         </li>
       </ul>
       <ul class="navbar-nav ms-auto">
         <li class="nav-item">
-          <a class="nav-link" [routerLink]="['/cart/sumary']" style="color: #fff; font-size: 1.1rem; letter-spacing: 1px; transition: color 0.3s ease-in-out;">Carrito</a>
+          <a class="nav-link" [routerLink]="['/user/register']" style="color: #fff; font-size: 1.1rem; letter-spacing: 1px; transition: color 0.3s ease-in-out; font-weight: 500;">
+            Register
+          </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" [routerLink]="['/user/login']" style="color: #fff; font-size: 1.1rem; letter-spacing: 1px; transition: color 0.3s ease-in-out;">Login</a>
+          <a class="nav-link" [routerLink]="['/user/login']" style="color: #fff; font-size: 1.1rem; letter-spacing: 1px; transition: color 0.3s ease-in-out; font-weight: 500;">
+            Login
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/cart/sumary']" style="color: #fff; font-size: 1.1rem; letter-spacing: 1px; transition: color 0.3s ease-in-out; font-weight: 500;">
+            Carrito
+          </a>
         </li>
       </ul>
     </div>
@@ -30,3 +41,51 @@
 
 <!-- Agregar enlace a la fuente de Google Fonts para un toque futurista -->
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+
+<!-- Estilos personalizados -->
+<style>
+  .navbar {
+    background: linear-gradient(145deg, #00d9d9, #00b8b8);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .navbar-toggler-icon {
+    background-color: #00d9d9;
+  }
+
+  .navbar-nav .nav-link {
+    color: #e0e0e0 !important;
+    transition: color 0.3s ease-in-out;
+    letter-spacing: 1px;
+    font-weight: 500;
+  }
+
+  .navbar-nav .nav-link:hover {
+    color: #00d9d9 !important;
+  }
+
+  .btn-outline-turquoise {
+    color: #00d9d9;
+    border-color: #00d9d9;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .btn-outline-turquoise:hover {
+    background-color: #00d9d9;
+    color: #121212;
+  }
+
+  .form-control {
+    border-radius: 25px;
+    border-color: #00d9d9;
+  }
+
+  .navbar-brand {
+    color: #00d9d9;
+    transition: color 0.3s ease;
+  }
+
+  .navbar-brand:hover {
+    color: #ffffff;
+  }
+</style>

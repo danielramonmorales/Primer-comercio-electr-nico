@@ -1,20 +1,22 @@
-<app-header-admin/>
+<app-header-admin></app-header-admin>
+
 <!-- Page Content List Categories-->
-<div class="container">
+<div class="container mt-5">
     <!-- Page Heading/Breadcrumbs -->
-    <h1 class="mt-4 mb-3">
-        Spring eCommerce <small>Categorias</small>
+    <h1 class="mt-4 mb-3 text-turquoise">
+        Spring eCommerce <small>Categorías</small>
     </h1>
 
     <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="">Home</a></li>
-        <li class="breadcrumb-item active">Ver Categorías</li>
+        <li class="breadcrumb-item"><a href="" class="text-turquoise">Home</a></li>
+        <li class="breadcrumb-item active text-turquoise">Ver Categorías</li>
     </ol>
 
-    <a class="btn btn-primary" routerLink="/admin/category/add"> Crear Categoría</a>
-    <h2>Categorías</h2>
-    <table class="table">
-        <thead>
+    <a class="btn btn-turquoise" routerLink="/admin/category/add"> Crear Categoría</a>
+    <h2 class="text-white">Categorías</h2>
+
+    <table class="table table-dark table-bordered">
+        <thead class="thead-dark">
             <tr>
                 <th>Nombre</th>
                 <th>Editar</th>
@@ -23,12 +25,11 @@
         </thead>
         <tbody *ngFor="let c of categories">
             <tr>
-                <td>{{c.name}}</td>                
-                <td><button class="btn btn-warning" [routerLink]="['/admin/category/update', c.id]">Editar</button> </td>
-                <td><button class="btn btn-danger" (click)="deleteCategoryById(c.id)">Eliminar</button>
+                <td>{{c.name}}</td>
+                <td><button class="btn btn-turquoise" [routerLink]="['/admin/category/update', c.id]">Editar</button></td>
+                <td><button class="btn btn-danger" (click)="deleteCategoryById(c.id)">Eliminar</button></td>
             </tr>
         </tbody>
     </table>
-
 </div>
 <!-- /.container -->
